@@ -13,6 +13,7 @@ setup(
     packages=['iomb'],
     package_data={'iomb': ["data/*.*"]},
     python_requires='>=3',
+    install_requires=['numpy', 'pandas>=0.17', 'matplotlib', 'flask'],
     long_description=open('README.rst').read(),
     classifiers=[
         "Development Status :: 5 - Production/Stable",
