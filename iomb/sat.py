@@ -314,7 +314,7 @@ class Table(object):
             new_table.sector_idx[new_sector.key] = new_col
             share_entries = {}
             shares[new_col] = share_entries
-            m_shares = market_shares.ix[:, commodity]
+            m_shares = market_shares.loc[:, commodity]
             for industry_key in m_shares.index:
                 share = m_shares[industry_key]
                 if share == 0:
