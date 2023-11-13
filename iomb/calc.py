@@ -68,7 +68,7 @@ def calculate(model: iom.Model, demand: dict,
         r.lcia_total = iaf.dot(r.lci_total)
         if isinstance(r.lcia_total, pd.Series):
             r.lcia_total = r.lcia_total.to_frame('Total')
-        r.lcia_flow_contributions = scale_columns(iaf, r.lci_total.as_matrix())
+        r.lcia_flow_contributions = scale_columns(iaf, r.lci_total.values)
 
     # calculate LCI contributions
     if perspective == DIRECT_PERSPECTIVE:
